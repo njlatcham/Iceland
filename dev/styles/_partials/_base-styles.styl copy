@@ -1,0 +1,45 @@
+@import '_normalize'
+
+* {
+    box-sizing: border-box
+    outline: none
+}
+
+html {
+    font-size: 10px
+}
+
+body {
+    max-width: 100%
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+    font-weight: 400
+    line-height: 1
+    margin: 0
+    padding: 0
+}
+
+a {
+    text-decoration: none
+    
+    &:focus {
+        outline: 0
+    }
+}
+
+.hor-wrapper {
+    margin: 0 auto
+    max-width: 1300px
+    width: 90%
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}

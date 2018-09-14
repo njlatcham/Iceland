@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Iceland</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display:700" rel="stylesheet">
+		<link rel="stylesheet" href="./public/styles/styles.css">
+	</head>
+
+	<body>
+		<header>
+			<div class="head">
+				<div class="nav">
+					<div class="logo">
+						<p>Wandr.</p>
+					</div>
+					<nav class="navigation">
+						<ul>
+							<li>
+								<a>Gallery</a>
+							</li>
+							<li>
+								<a>Excursions</a>
+							</li>
+							<li>
+								<a>Home</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="title">
+					<h1 class="iceland">Iceland</h1>
+					<div class="subheader">
+						<div class="line"></div>
+						<h3 class="subtitle">A landscape of legends</h3>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="ice">
+			<h3 class="land">Land of</h3>
+			<h2 class="snow">Ice &amp; Snow</h2>
+			<img class="alex" src="./public/res/img/alex-talmon-393-unsplash.jpg">
+			<p class="plant">Yes, Robert Plant and Co. were so moved by the land of ice and snow while playing a gig in the capital Reykjavik that they decided to pay homage to the nation in verse, and wrote and finessed the track in just six days, in time for their next show.</p>
+			<img class="martin" src="./public/res/img/martin-jernberg-197949-unsplash.jpg">
+			<p class="plant">That Iceland is so powerful as to inform the music of one of the world's biggest rock bands, it is no surprise that it continues to enjoy unprecendented popularity, welcoming more and more visitors to its marvellous shores.</p>
+		</section>
+
+		<section class="fuck">
+			<div class="piss">
+				<img class="piss-image piss-image--active" src="./public/res/img/jeremy-goldberg-38464-unsplash.jpg" data-slide>
+				<img class="piss-image" src="./public/res/img/martin-jernberg-197949-unsplash.jpg" data-slide>
+				<img class="piss-image" src="./public/res/img/jeremy-goldberg-38464-unsplash.jpg" data-slide>
+				<img class="piss-image" src="./public/res/img/martin-jernberg-197949-unsplash.jpg" data-slide>
+				<img class="piss-image" src="./public/res/img/jeremy-goldberg-38464-unsplash.jpg" data-slide>
+			</div>
+
+			<div class="shit">
+				<h3 class="favourite">Favourite Excursions</h3>
+				<nav class="excursions">
+					<ol>
+						<li class="slide slide--active" data-slide>
+							<a>South Coast and Jökulsárlón Glacier Lagoon Day Tour</a>
+							<div class="line2"></div>
+						</li>
+						<li class="slide" data-slide>
+							<a>Golden Circle Express Tour including Gullfoss and Geysir</a>
+							<div class="line2"></div>
+						</li>
+						<li class="slide" data-slide>
+							<a>Northern Lights Night Tour from Reykjavik</a>
+							<div class="line2"></div>
+						</li>
+						<li class="slide" data-slide>
+							<a>Southern Iceland Glaciers, Waterfalls, and Beaches Day Tour</a>
+							<div class="line2"></div>
+						</li>
+						<li class="slide" data-slide>
+							<a>'Game of Thrones' Tour from Reykjavik</a>
+							<div class="line2"></div>
+						</li>
+					</ol>
+				</nav>
+			</div>
+		</section>
+
+		<script>
+			var slides = document.querySelectorAll('li[data-slide]')
+			var slidesImages = document.querySelectorAll('img[data-slide]')
+
+			var slidesArray = Array.from(slides)
+			var slidesImagesArray = Array.from(slidesImages)
+
+			slidesArray.forEach(function(slide, i) {
+				slide.addEventListener('click', function() {
+					slidesArray.forEach(function(slide) {
+						slide.classList.remove('slide--active')
+					})
+
+					slidesImagesArray.forEach(function(slidesImage) {
+						slidesImage.classList.remove('piss-image--active')
+					})
+
+					slidesArray[i].classList.add('slide--active')
+					slidesImagesArray[i].classList.add('piss-image--active')
+				})
+			})
+		</script>
+	</body>
+</html>
