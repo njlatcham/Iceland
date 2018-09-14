@@ -4,4 +4,5 @@ Iceland is a simple one-page application using HTML, stylus and some simple Java
 
 ## Final Product
 
-!["Screenshot of Home Page"]()
+!["Screenshot of Home Page"](https://github.com/njlatcham/Iceland/blob/master/public/res/img/homepageScreenshot.png)
+!["Screenshot of Carousel"](https://github.com/njlatcham/Iceland/blob/master/public/res/img/carouselScreenshot.png)
